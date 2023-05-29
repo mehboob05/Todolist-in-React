@@ -44,7 +44,7 @@ const deleteitem = (index) =>{
             <h2 className=" text-white " style={{textAlign:"center"}}>TO DO List</h2>
         <div className="box">
             <input onKeyUp={Enterkeypressed} onChange={changevalue} type="text" value={text} id="inputField"  ref={inputField}/>
-            <button className="addNew  border border-secondary " style={{backgroundColor: "#29377c", borderRadius: "12px", color: "white",fontSize: "20px",fontWeight: "bold"}} onClick={addnewitem}>AddTask</button>
+            <button className="addNew  border border-secondary " style={{backgroundColor: "#29377c", color: "white",fontSize: "20px",fontWeight: "bold"}} onClick={addnewitem}>AddTask</button>
         </div>
         <div className="list_box">
             <ul id="list">
