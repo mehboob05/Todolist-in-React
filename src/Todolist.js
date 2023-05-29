@@ -31,12 +31,21 @@ const Enterkeypressed = (event) =>{
 
 // delete function 
 const deleteitem = (index) =>{
-    if (window.confirm('Are you sure you wish to delete this item?')){
+    const confirmBox = window.confirm(
+        "Are you sure you wish to delete this item?"
+      )
+      if (confirmBox === true) {
         const res = taskname.toSpliced(index,1)
-        setTaskName(res);
-    }
-
+     setTaskName(res);
+      }
    
+   
+}
+//delete all function
+const clearAll = (index) => {
+        const res = taskname.toSpliced(index)
+     setTaskName(res);
+    
 }
     return (
         <div>
@@ -54,8 +63,11 @@ const deleteitem = (index) =>{
                     })
                 }
             </ul>
+            <div><button type="button" className="btn3" onClick={()=>{clearAll()}}>Clear All Items</button></div>
         </div>
+       
     </div>
+             
         </div>
     );
 }
